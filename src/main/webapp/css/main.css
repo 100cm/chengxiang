@@ -1,0 +1,23 @@
+
+
+
+.devise-panel{
+    box-shadow: 1px 3px 3px rgba(150, 152, 153, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 15px;
+    margin: 0px auto;
+    max-width: 600px;
+
+
+
+}
+.profile-panel{
+
+max-width: 80%;
+
+}
+.show-label{
+
+    color:#888;
+}

@@ -1,0 +1,68 @@
+房屋model
+
+名字 name
+
+用户表
+CREATE TABLE `users` (
+      `id` int(11) NOT NULL AUTO_INCREMENT,
+      avatar varchar(20),
+       email varchar(20),
+       phone  varchar(20),
+      `username` char(20) DEFAULT NULL,
+      created_at timestamp NOT NULL default CURRENT_TIMESTAMP,
+      password varchar(20),
+      is_admin boolean DEFAULT false,
+      PRIMARY KEY (`id`)
+      );
+
+  CREATE TABLE `houses` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+			avatar varchar(20),
+             name varchar(20),
+             size varchar(20),
+			 type varchar(20),
+             postion  varchar(20),
+             ownername varchar(20),
+             ownerid int(11),
+             isborrowed boolean,
+             isempty int(3) default 0,
+            `borrowerid` char(20) DEFAULT NULL,
+             borrowertime date ,
+             returntime date,
+             price int(11),
+             info text ,
+             createdat timestamp NOT NULL default CURRENT_TIMESTAMP,
+             PRIMARY KEY (`id`)
+            );
+
+         CREATE TABLE  comments (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        userid int(11),
+        username varchar(20),
+        houseid int(11),
+        comment  text,
+        createdat timestamp NOT NULL default CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`)
+);
+
+
+            合同表
+
+         CREATE TABLE  contract (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            useraid int(11),
+            useraname varchar(20),
+            userbid int(11),
+            userbname varchar(20),
+            starttime date,
+            houseid int(11),
+
+            endtime  date,
+
+            totalprice int(11),
+
+
+    info text,
+ createdat timestamp NOT NULL default CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`)
+         )
